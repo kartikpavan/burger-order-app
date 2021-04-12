@@ -5,6 +5,9 @@ const path=require("path")
 const expressLayout=require("express-ejs-layouts");
 
 
+//Assets
+app.use(express.static('public'))
+
 app.get("/",function(req,res){
     res.render("home")
 })

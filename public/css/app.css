@@ -1,0 +1,64 @@
+body {
+  font-family: "RocknRoll One", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+nav li:last-child a {
+  background: #9ede73;
+}
+nav li:last-child a:hover {
+  color: #f7ea00;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #f7ea00;
+}
+
+section.hero {
+  background: #f8f5f1;
+}
+
+.add-to-cart {
+  border: 2px solid #9ede73;
+  color: #9ede73;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #9ede73;
+  border-color: #fff;
+  color: #fff;
+}
+.add-to-cart:focus {
+  outline: none;
+}
+
+.btn-primary {
+  background: #9ede73;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  color: #f7ea00;
+}
+
+section.cart {
+  background: #f8f5f1;
+}
+section.cart .amount {
+  color: #9ede73;
+}
+
+section.login {
+  background: #f8f5f1;
+  min-height: calc(100vh - 125px);
+  transition: all 0.3s ease-in-out;
+}
+section.login a {
+  color: #9ede73;
+}
+section.login a:hover {
+  color: #f7ea00;
+}
