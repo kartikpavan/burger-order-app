@@ -22,7 +22,7 @@ body{
 nav li:last-child a{
     background: $primary;
     &:hover{  
-        color: $primary-hover;
+        color: $secondary;
     }
 }
 
@@ -34,7 +34,7 @@ nav li a{
 }
 
 section.hero{
-    background: $secondary;
+    background: $primary-hover;
 }
 
 .add-to-cart{

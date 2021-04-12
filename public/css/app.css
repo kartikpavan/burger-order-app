@@ -8,7 +8,7 @@ nav li:last-child a {
   background: #9ede73;
 }
 nav li:last-child a:hover {
-  color: #f7ea00;
+  color: #f8f5f1;
 }
 
 nav li a {
@@ -19,7 +19,7 @@ nav li a:hover {
 }
 
 section.hero {
-  background: #f8f5f1;
+  background: #f7ea00;
 }
 
 .add-to-cart {
