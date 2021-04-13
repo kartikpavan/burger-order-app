@@ -1,9 +1,13 @@
+require('dotenv').config() // to have the a=access of env file in our application
 const express=require('express')
 const app=express()
 const ejs=require("ejs")
 const path=require("path")
 const expressLayout=require("express-ejs-layouts");
 const mongoose = require('mongoose')
+const session = require('express-session')
+const flash = require('express-flash')
+const MongoStore = require('connect-mongo');
 
 
 // Database Connection
@@ -23,9 +27,34 @@ connection.once('open', function() {
     console.log("Connection Failed...")
 })
 
+
+
+//middleware
+app.use(flash());
+
 //Assets
 app.use(express.static('public'))
+app.use(express.json())
+//session-config
 
+
+
+app.use(session({
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    store: MongoStore.create({              //saving sessions in mongo database (by default stored in memory)
+        mongoUrl: 'mongodb://localhost/burger',
+        collectionName: 'sessions'
+    }),
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }
+  }))
+
+//global-middleware
+app.use((req,res,next)=>{
+    res.locals.session = req.session
+    next()
+})
 
 //set template engine
 app.use(expressLayout)

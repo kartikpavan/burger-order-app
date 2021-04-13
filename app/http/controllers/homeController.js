@@ -4,16 +4,15 @@ const Menu = require('../../models/menu')
 function homeController(){
 
     return {
-       async index(req,res){
+        index(req,res){
 
-            const burgers = await Menu.find()
-            return res.render('home',{burgers:burgers})
+            // const burgers = await Menu.find()
+            // return res.render('home',{burgers:burgers})
 
-            // Menu.find().then(function(burgers){
-            //     console.log(burgers)
+            Menu.find().then(function(burgers){
 
-            // res.render('home',{burgers:burgers})
-            // })
+            res.render('home',{burgers:burgers})
+            })
 
         }
 
