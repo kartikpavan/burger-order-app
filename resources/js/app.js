@@ -29,13 +29,6 @@ function updateCart(burger){
 
 
 
-
-
-
-
-
-
-
 addToCart.forEach((btn)=>{
     btn.addEventListener('click',function(e){
         let burger=JSON.parse(btn.dataset.burger)

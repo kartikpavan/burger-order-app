@@ -15,7 +15,7 @@ function authController(){
             const { email, password }   = req.body
            // Validate request 
             if(!email || !password) {
-                req.flash('error', 'All fields are required')
+                req.flash('error', 'Missing Credentials ')
                 return res.redirect('/login')
             }
             passport.authenticate('local', (err, user, info) => {

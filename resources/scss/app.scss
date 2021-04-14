@@ -3,8 +3,8 @@
 
 //colors
 
-$primary:#9ede73;
-$primary-hover:#f7ea00;
+$primary:  #769353;
+$primary-hover:#3d655d;
 $secondary : #f8f5f1;
 $pure:#fff;
 $dark:#232323;
@@ -36,7 +36,10 @@ nav li a{
 }
 
 section.hero{
-    background: $primary-hover;
+    // background: rgb(131,58,180);
+    // background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(70,171,77,1) 0%, rgba(64,183,66,1) 0%, rgba(197,255,190,0.6354691534817052) 100%, rgba(252,176,69,1) 100%);
+    background: rgb(235,191,88);
+    background: linear-gradient(0deg, rgba(235,191,88,0.75) 0%, rgba(242,41,0,0) 35%, rgba(235,191,88,0.75) 100%);
 }
 
 .add-to-cart{
@@ -63,14 +66,18 @@ section.hero{
 }
 
 section.cart{
-    background: $secondary;
+    background: rgb(235,191,88);
+background: linear-gradient(0deg, rgba(235,191,88,0.5) 0%, rgba(242,41,0,0) 35%, rgba(235,191,88,0) 100%);
+    // background: $secondary;
     .amount{
         color: $primary;
     }
 }
 
 section.login{
-    background: $secondary;
+    background: rgb(235,191,88);
+    background: linear-gradient(0deg, rgba(235,191,88,0.5) 0%, rgba(242,41,0,0) 35%, rgba(235,191,88,0) 100%);
+    // background: $secondary;
     min-height: calc(100vh - 125px);
     transition: $smooth;
 

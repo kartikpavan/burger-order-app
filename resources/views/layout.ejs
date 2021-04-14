@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Shurger</title>
+    <link rel="icon" href="/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
 </head>
@@ -22,7 +24,8 @@
         <div>
             <ul class="flex item-center">
                 <li class="ml-6 py-2"><a href="#">Offers</a> </li>
-                <li class="ml-6 py-2"><a href="#">Menu</a> </li>
+                <li class="ml-6 py-2"><a href="#menu">Menu</a> </li>
+                
                 <% if(user) {%>
                 <li class="ml-6 py-2">
                     <form id="logout" action="/logout" method="POST">
