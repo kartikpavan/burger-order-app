@@ -4,7 +4,7 @@
 //colors
 
 $primary:  #769353;
-$primary-hover:#3d655d;
+$primary-hover:#33484d;
 $secondary : #f8f5f1;
 $pure:#fff;
 $dark:#232323;
@@ -35,12 +35,25 @@ nav li a{
     }
 }
 
-section.hero{
-    // background: rgb(131,58,180);
-    // background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(70,171,77,1) 0%, rgba(64,183,66,1) 0%, rgba(197,255,190,0.6354691534817052) 100%, rgba(252,176,69,1) 100%);
+section.hero-1{
+
     background: rgb(235,191,88);
-    background: linear-gradient(0deg, rgba(235,191,88,0.75) 0%, rgba(242,41,0,0) 35%, rgba(235,191,88,0.75) 100%);
+    background: linear-gradient(0deg, rgba(235,191,88,1) 35%, rgba(118,147,83,1) 35%, rgba(118,147,83,1) 35%);
+    color: #f2edd7;
 }
+section.hero-2{
+
+    background: rgb(27,23,23);
+    background: linear-gradient(0deg, rgba(27,23,23,1) 35%, rgba(255,106,40,1) 35%, rgba(129,0,0,1) 35%);
+    color: #f2edd7;
+}
+section.hero-3{
+
+    background: rgb(192,96,20);
+    background: linear-gradient(0deg, rgba(192,96,20,1) 35%, rgba(255,106,40,1) 35%, rgba(66,70,66,1) 35%);
+    color: #f2edd7;
+}
+
 
 .add-to-cart{
     border: 2px solid $primary;
@@ -58,7 +71,7 @@ section.hero{
 
 
 .btn-primary{
-    background: $primary;
+    background: #ff6a28;
     transition: $smooth;
     &:hover{
        color: $primary-hover;
@@ -66,18 +79,16 @@ section.hero{
 }
 
 section.cart{
-    background: rgb(235,191,88);
-background: linear-gradient(0deg, rgba(235,191,88,0.5) 0%, rgba(242,41,0,0) 35%, rgba(235,191,88,0) 100%);
-    // background: $secondary;
+    
+    background: $secondary;
     .amount{
         color: $primary;
     }
 }
 
 section.login{
-    background: rgb(235,191,88);
-    background: linear-gradient(0deg, rgba(235,191,88,0.5) 0%, rgba(242,41,0,0) 35%, rgba(235,191,88,0) 100%);
-    // background: $secondary;
+   
+    background: $secondary;
     min-height: calc(100vh - 125px);
     transition: $smooth;
 
@@ -88,4 +99,36 @@ section.login{
         }
     }
 
+}
+
+// carousel code
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #769353;  /*Set to match the Tailwind colour you want the active one to be */
 }
