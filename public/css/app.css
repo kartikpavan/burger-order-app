@@ -313,6 +313,11 @@ section.hero-3 {
   color: #f2edd7;
 }
 
+/* footer */
+#footer {
+  background: #769353;
+}
+
 .add-to-cart {
   border: 2px solid #769353;
   color: #769353;
@@ -333,6 +338,9 @@ section.hero-3 {
 }
 .btn-primary:hover {
   color: #33484d;
+}
+.btn-primary:focus {
+  outline: none;
 }
 
 section.cart {
@@ -386,4 +394,62 @@ section.login a:hover {
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
   color: #769353;
   /*Set to match the Tailwind colour you want the active one to be */
+}
+
+.swing {
+  -webkit-animation: swing ease-in-out 1s infinite alternate;
+          animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.swing img {
+  border: 5px solid #f8f8f8;
+  display: block;
+}
+
+.swing:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+/* nail */
+.swing:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}
+
+@-webkit-keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
