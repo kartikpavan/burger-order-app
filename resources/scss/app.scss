@@ -108,6 +108,9 @@ section.login{
     }
 
 }
+.link{
+    color: $primary;
+}
 
 // carousel code
 
@@ -178,3 +181,17 @@ section.login{
     0% { transform: rotate(3deg); }
     100% { transform: rotate(-3deg); }
 }
+
+
+
+// responsiveness
+@media(max-width:1060px){  // if screen width is less than 1060px apply the below style
+   .container{
+    max-width: 90%;
+}
+}
+@media(max-width:638px){  // if screen width is less than 1060px apply the below style
+    .cart_img{
+     max-width: 0%;
+ }
+ }

@@ -45,10 +45,9 @@ function cartController(){
              return res.json({totalQty: req.session.cart.totalQty})
         },
         remove(req,res){
-            req.session.destroy(function(err) {
-                // cannot access session here
-                return res.redirect('/cart')
-            })
+            delete req.session.cart
+            res.redirect('/cart')
+           
         }
 
 

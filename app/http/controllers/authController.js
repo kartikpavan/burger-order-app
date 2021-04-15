@@ -32,8 +32,11 @@ function authController(){
                         req.flash('error', info.message ) 
                         return next(err)
                     }
-
-                    return res.redirect('/')
+                    if(req.user.role === 'admin'){
+                    return res.redirect('/admin/orders')
+                }else{
+                    return res.redirect('/customer/orders')
+                }
                 })
             })(req, res, next)
         },

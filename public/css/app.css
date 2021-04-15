@@ -362,6 +362,10 @@ section.login a:hover {
   color: #33484d;
 }
 
+.link {
+  color: #769353;
+}
+
 .carousel-open:checked + .carousel-item {
   position: static;
   opacity: 100;
@@ -451,5 +455,15 @@ section.login a:hover {
   }
   100% {
     transform: rotate(-3deg);
+  }
+}
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 638px) {
+  .cart_img {
+    max-width: 0%;
   }
 }

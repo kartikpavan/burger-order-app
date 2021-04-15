@@ -1,0 +1,43 @@
+
+<section class="orders light-section">
+    <div class="container mx-auto pt12">
+        <h1 class="font-bold text-lg mb-4 pt-8 pl-12">All Orders</h1>
+        <% if(messages.success){%>
+        <div id="success" class=" flex bg-green-600  px-2 py-1 md:w-1/3 shadow-md my-2" role="alert">
+        <svg class="h-6 w-6 text-white mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg>
+        <p class="text-sm text-white"> <%= messages.success%> </p>
+
+        </div>
+        <% }%>
+        <table class=" w-full table-auto bg-white">
+            <thead>
+                <tr>
+                    <th class="pl-12 px-4 py-2 text-left">Order ID</th>
+                    <th class="px-4 py-2 text-left">Address</th>
+                    <th class="px-4 py-2 text-left">Phone Number</th>
+                    <th class="px-4 py-2 text-left">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(orders.length) {%>
+                    <% orders.forEach(order => { %>
+                        <tr>
+                    <td class="pl-12 link text-sm border px-4 py-2"><a href="#"><%= order._id%></a></td>
+                    <td class="text-sm border px-4 py-2"><%=order.address%></td>
+                    <td class="text-sm border px-4 py-2"><%=order.phone%></td>
+                    <td class="text-sm border px-4 py-2"><%=moment(order.createdAt).format('dddd , hh:mm A') %></td>
+                </tr>
+                        
+                   <% }); %>
+               
+                <%} else { %>
+                    <tr>
+                        <td class="p-4"><span>No Orders found!!</span></td>
+                    </tr>
+                    
+                <%} %>
+            </tbody>
+
+        </table>
+    </div>
+</section>

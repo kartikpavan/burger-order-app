@@ -2,7 +2,7 @@
 <section class="cart py-16">
     
     <% if(session.cart){%>
-    <div class="order container mx-auto w-1/2">
+    <div class="order container mx-auto xl:w-1/2">
 
         <div class="flex items-center border-b border-gray-300 pb-4">
             <img src="/img/cart-black.png" alt="">
@@ -20,7 +20,7 @@
                 <div class="flex-1 ml-4">
                     <h1><%= burger.item.name %></h1>
                 </div>
-                <span class="flex-1"><%=burger.qty%></span>
+                <span class="flex-1"><%=burger.qty%> Pcs</span>
                 <span class="font-bold text-lg">₹<%=burger.item.price * burger.qty %></span>
             </div>
         <%}%>
@@ -34,16 +34,18 @@
                 <span class="amount text-2xl font-bold ml-2">₹<%=session.cart.totalPrice %></span>
             </div>
             <div>
-                <form action="" class="mt-8">
-                    <input class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Phone Number" type="text" name="" id="">
-                    <input class="border border-gray-400 p-2 w-1/2" placeholder="Address" type="text" name="" id="">
+                <%if(user){ %>
+                <form action="/orders" method="POST" class="mt-8">
+                    <input name="phone" autocomplete="nope" class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Phone Number" type="text" >
+                    <input name="address" autocomplete="nope" class="border border-gray-400 p-2 w-1/2" placeholder="Address" type="text"  >
                     <div>
                     <button type="submit" class="btn-primary px-6 py-2 rounded-full font-bold mt-6 text-white">Order Now</button>
                     </div>
                 </form>
-            <!-- </div>
-            <a href="" class="inline-block cursor-pointor btn-primary px-6 py-2 rounded-full font-bold mt-6 text-white">Login to Continue</a>
-        </div> -->
+                <%}else{ %>
+            </div>
+            <a href="/login" class="inline-block cursor-pointor btn-primary px-6 py-2 rounded-full font-bold mt-6 text-white">Sign In to Order</a>
+        </div> <%}%>
 
     </div>
    

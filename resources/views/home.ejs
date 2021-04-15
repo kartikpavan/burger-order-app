@@ -8,7 +8,7 @@
             <div class="container mx-auto px-12 py-20 flex items-center justify-between ">
                 <div class="w-1/2">
                     <h1 class="text-lg underline"><em>Orders ₹499+ & Get</em></h1> <br>
-                    <h1 class="text-6xl  font-bold">Free Delivery </h1>
+                    <h1 class="text-3xl md:text-6xl  font-bold">Free Delivery </h1>
                     <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary "><a href="#menu"> Order Now</a>  </button>
                 </div>
                 <div><img src="/img/hero-burger.png" alt=""></div>
@@ -25,7 +25,7 @@
        <section class="hero-3">
         <div class="container mx-auto px-12 py-20 flex items-center justify-between ">
             <div class="w-1/2">
-                <h1 class="text-5xl  font-bold">Cricket Mania Combos Starting @ ₹123</h1>
+                <h1 class="text-3xl md:text-6xl  font-bold">Cricket Mania Combos Starting @ ₹123</h1>
                 <h1 class="text-xs ">*T&C Apply</h1> <br>
                 <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary "><a href="#menu"> Order Now</a>  </button>
             </div>
@@ -43,8 +43,8 @@
         <section class="hero-2">
             <div class="container mx-auto px-12 py-20 flex items-center justify-between ">
                 <div class="w-1/2">
-                    <h1 class="text-6xl  font-bold">Double Patty</h1>
-                    <h1 class="text-2xl underline">Only @ ₹200</h1> <br>
+                    <h1 class="text-3xl md:text-6xl  font-bold">Double Patty</h1>
+                    <h1 class="text-lg underline">Only @ ₹200</h1> <br>
 
                     <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary "><a href="#menu"> Order Now</a>  </button>
                 </div>
@@ -72,26 +72,15 @@
 	</div>
 </div>
 
-    <!-- HERO SECTION -->
-    <!-- <section class="hero">
-        <div class="container mx-auto px-12 py-20 flex items-center justify-between ">
-            <div class="w-1/2">
-                <h1 class="text-lg underline"><em>Orders ₹499+ & Get</em></h1> <br>
-                <h1 class="text-6xl  font-bold">Free Delivery </h1>
-                <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary ">Order Now</button>
-            </div>
-            <div><img src="/img/hero-burger.png" alt=""></div>
-        </div>
-    </section> -->
-
+ 
     <!-- MENU SECTION -->
 
     <section id="menu" class="menu container mx-auto py-8 px-12">
 
         <h1 class="text-3xl font-bold mb-8">All Burgers</h1>
-        <div class="grid grid-cols-4 col-gap-12 row-gap-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
              <% burgers.forEach(function(burger){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                     <img class="h-40 mb-4 mx-auto" src="/img/<%= burger.image %>" alt="">
                     <div class="text-center ">
                         <h2 class="mb-4 text-lg "> <%= burger.name %></h2>
