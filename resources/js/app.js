@@ -38,6 +38,14 @@ addToCart.forEach((btn)=>{
     })
 })
 
+//Removing alert after 5 seconds
+const removeAlert = document.querySelector('#success')
+if (removeAlert){
+    timeout(()=>{
+        removeAlert.remove()
+    }, 2000)
+}
+
 
 //admin code
 const orderTableBody = document.querySelector('#orderTableBody')

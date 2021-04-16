@@ -1881,7 +1881,16 @@ addToCart.forEach(function (btn) {
     var burger = JSON.parse(btn.dataset.burger);
     updateCart(burger);
   });
-}); //admin code
+}); //Removing alert after 5 seconds
+
+var removeAlert = document.querySelector('#success');
+
+if (removeAlert) {
+  timeout(function () {
+    removeAlert.remove();
+  }, 2000);
+} //admin code
+
 
 var orderTableBody = document.querySelector('#orderTableBody');
 var orders = [];
