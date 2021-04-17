@@ -35,11 +35,20 @@
             </div>
             <div>
                 <%if(user){ %>
-                <form action="/orders" method="POST" class="mt-8">                   
+                <form action="/orders" method="POST" class="mt-8">         
+                    <div class="relative w-1/2 ml-auto">
+                        <span class="text-gray-700">Select Payment Method</span>
+                        <select id="paymentType" class="form-select block border border-gray-400 p-2 w-full mb-4 mt-1">
+                          <option value="COD">Pay on Delivery </option>
+                          <option value="card">Pay with Card</option>
+                        </select>
+                      </div>          
                     </div>
                     <input name="phone" autocomplete="nope" class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Phone Number" type="text" >
                     <input name="address" autocomplete="nope" class="border border-gray-400 p-2 w-1/2" placeholder="Address" type="text"  >
-                    <div>
+                    <div class="mt-4">
+                        <div id="card-element"></div>
+
                     <button type="submit" class="btn-primary px-6 py-2 rounded-full font-bold mt-6 text-white">Order Now</button>
                     </div>
                 </form>
