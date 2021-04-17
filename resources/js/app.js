@@ -2,6 +2,7 @@ import axios from 'axios'
 import Noty from 'noty'
 import moment from 'moment'
 
+
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter=document.querySelector('#cartCounter')
 function updateCart(burger){
@@ -45,6 +46,8 @@ if (removeAlert){
         removeAlert.remove()
     }, 2000)
 }
+
+
 
 
 //admin code
