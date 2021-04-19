@@ -23,10 +23,20 @@ function initRoutes(app){
     //customer routes
     app.post('/orders',auth,orderController().store)
     app.get('/customer/orders',auth,orderController().index)
-
+    
     //admin Routes
     app.get('/admin/orders',auth,AdminOrderController().index)
 
+    //contact us 
+
+     app.get('/contact',function(req,res){
+        res.render('contact')
+    })
+    app.post('/thankyou',function(req,res){
+
+        res.render('thankyou')
+    })
+    
 
 }
 

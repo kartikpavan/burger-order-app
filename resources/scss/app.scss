@@ -5,7 +5,7 @@
 
 $primary:  #769353;
 $primary-hover:#33484d;
-$secondary : #f8f5f1;
+$secondary : #e6e6e6;
 $pure:#fff;
 $dark:#232323;
 $gray:#ccc;
@@ -97,7 +97,7 @@ section.cart{
 section.login{
    
     background: $secondary;
-    min-height: calc(100vh - 125px);
+    min-height: calc(100vh - 145px);
     transition: $smooth;
 
     a{

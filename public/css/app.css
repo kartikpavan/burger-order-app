@@ -285,7 +285,7 @@ nav li:last-child a {
   background: #769353;
 }
 nav li:last-child a:hover {
-  color: #f8f5f1;
+  color: #e6e6e6;
 }
 
 nav li a {
@@ -344,15 +344,15 @@ section.hero-3 {
 }
 
 section.cart {
-  background: #f8f5f1;
+  background: #e6e6e6;
 }
 section.cart .amount {
   color: #769353;
 }
 
 section.login {
-  background: #f8f5f1;
-  min-height: calc(100vh - 125px);
+  background: #e6e6e6;
+  min-height: calc(100vh - 145px);
   transition: all 0.3s ease-in-out;
 }
 section.login a {
