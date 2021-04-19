@@ -311,9 +311,7 @@ section.login{
     transition: all .2s ease-in-out;
   }
   
-  .social-media-list li:hover {
-    background-color: #fff; 
-  }
+  
   
   .social-media-list li:hover:after {
     opacity: 1;  
@@ -325,13 +323,7 @@ section.login{
     color: #000;
   }
   
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: #555;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  
+
   hr {
     border-color: rgba(255,255,255,.8); ;
   }
