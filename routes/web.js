@@ -4,6 +4,7 @@ const authController = require('../app/http/controllers/authController')
 const cartController = require('../app/http/controllers/customers/cartController')
 const orderController = require('../app/http/controllers/customers/orderController')
 const AdminOrderController = require('../app/http/controllers/admin/orderController')
+const contactController = require('../app/http/controllers/contactController')
 
 const auth = require('../app/http/middlewares/auth')
 
@@ -28,14 +29,10 @@ function initRoutes(app){
     app.get('/admin/orders',auth,AdminOrderController().index)
 
     //contact us 
+    app.get('/contact',contactController().index)
+    app.post('/contact',contactController().thankyou)
 
-     app.get('/contact',function(req,res){
-        res.render('contact')
-    })
-    app.post('/thankyou',function(req,res){
 
-        res.render('thankyou')
-    })
     
 
 }

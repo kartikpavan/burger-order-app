@@ -1,10 +1,10 @@
 const Order = require('../../../models/order')
 const moment = require('moment')
+
 function orderController(){
 
 return {
     store(req,res){
-        console.log(req.body)
         //validate request
 
         const {phone,address} = req.body
