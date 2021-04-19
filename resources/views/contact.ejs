@@ -1,12 +1,16 @@
- <section class="login flex justify-center pt-12">
-    
-<form action="/contact" method="post" class="w-1/2 max-w-lg">
-    <div class="flex flex-wrap -mx-3 mb-6">
+
+<section class="login flex justify-wrap px-56">
+<form action="/contact" method="post" class="w-1/2 max-w-lg mx-24">
+  <div class="flex justify-center">  
+    <h1 class="font-bold text-4xl mb-6 text-orange-600">CONTACT</h1>
+  </div>
+
+  <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
           First Name
         </label>
-        <input required autocomplete="none" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="firstname" type="text" >
+        <input required autocomplete="none" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white" name="firstname" type="text" >
       </div>
       <div class="w-full md:w-1/2 px-3">
         <label  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
@@ -20,7 +24,7 @@
         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
           E-mail
         </label>
-        <input required autocomplete="off" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='email' type="email">
+        <input required autocomplete="off" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='email' type="email">
       </div>
     </div>
     <div class="flex flex-wrap -mx-3 mb-6">
@@ -31,13 +35,39 @@
         <textarea required class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" name="message"></textarea>
       </div>
     </div>
-    <div class="md:flex md:items-center">
-      <div class="md:w-1/3">
-        <button class="btn-primary shadow focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+    <div class="pb-12 md:flex md:items-center">
+        <button class="btn-primary w-full shadow focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
           Send
         </button>
-      </div>
-      <div class="md:w-2/3"></div>
     </div>
   </form>
+
+  <div class=" direct-contact-container">
+
+    <ul class="contact-list">
+      <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">New Delhi, INDIA</span></i></li>
+      
+      <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(011) 123-4567</a></span></i></li>
+      
+      <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">burgershurger@gmail.com</a></span></i></li>
+      
+    </ul>
+
+    <hr>
+    <ul class="social-media-list">
+      <li><a href="https://github.com/kartikpavan" class="contact-icon">
+        <i class="fab fa-github"></i></a>
+      </li>
+      <li><a href="https://twitter.com/kartik_im" class="contact-icon">
+        <i class="fab fa-twitter" ></i></a>
+      </li>
+      <li><a href="https://www.instagram.com/im_vkartik/"  class="contact-icon">
+        <i class="fab fa-instagram" ></i></a>
+      </li>
+    </ul>
+    <hr>
+
+
+  </div>
   </section>
+  
