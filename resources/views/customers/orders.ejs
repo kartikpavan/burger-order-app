@@ -26,7 +26,7 @@
                     <td class="pl-12 link text-sm border px-4 py-2"><a href="#"><%= order._id%></a> </td>
                     <td class="text-sm border px-4 py-2"><%=order.address%></td>
                     <td class="text-sm border px-4 py-2"><%=order.phone%></td>
-                    <td class="text-sm border px-4 py-2"><%=moment(order.createdAt).format('dddd , hh:mm A') %></td>
+                    <td class="text-sm border px-4 py-2"><%=moment(order.createdAt).format('lll') %></td>
                 </tr>
                         
                    <% }); %>
