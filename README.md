@@ -41,7 +41,7 @@ This is an example of how to list things you need to use the software and how to
 ## Installation
 1) clone the project
 ```bash
- git clone https://github.com/kartikpavan/User_Auth.git
+ git clone https://github.com/kartikpavan/burger-order-app.git
 ```
 2) install the necessary dependencies
 ``` bash
@@ -49,7 +49,7 @@ npm install
 ```
 3) start the development server
 ``` bash
-nodemon app.js
+nodemon app.js or node app.js
 ```
 
 After download or clone run npm install to install all the dependancies.
